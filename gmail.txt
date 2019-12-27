@@ -1,0 +1,35 @@
+from selenium import webdriver
+import pyautogui
+import time
+
+driver = webdriver.Firefox()
+driver.get("https://mail.google.com")
+login_func = driver.find_element_by_name("identifier")
+login_func.send_keys("sample_login")
+driver.find_element_by_id("identifierNext").click()
+time.sleep(2)
+pyautogui.click(805, 536)
+time.sleep(5)
+pass_func = driver.find_element_by_name('password')
+pass_func.send_keys("sample_password")
+driver.find_element_by_xpath("//*[@id='passwordNext']/content/span").click()
+
+
+
+
+System.Threading.Thread.Sleep(1000);
+            Adress.Click();
+System.Threading.Thread.Sleep(1000);
+            Adress.SendKeys("email@gmail.com");
+System.Threading.Thread.Sleep(1000);
+            Subject.SendKeys("Hello");
+ƒалее локаторы дл€ адреса, темы и тела письма:
+
+ [FindsBy(How = How.XPath, Using = "//textarea[@class='vO']")]
+        public IWebElement Adress { get; set; }
+
+[FindsBy(How = How.XPath, Using = ".//*[@name=\"subjectbox\"]")]
+        public IWebElement Subject { get; set; }
+
+[FindsBy(How = How.XPath, Using = "//*[@class=\"Am Al editable LW-avf\"]")]
+        public IWebElement BodyMail { get; set; }
